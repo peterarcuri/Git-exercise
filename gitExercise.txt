@@ -1,0 +1,90 @@
+===== Installation =====
+
+1) Git was already installed on my Mac. You could type "git --version" to see if it's installed
+   
+   If not installed, you can go to this URL (https://git-scm.com/downloads) and download the lastest & the greatest :-))
+
+
+
+===== Configuration =====
+
+2) git config --global user.name ("enter your name here")
+
+   git config --global email ("enter your email here")
+
+
+
+
+===== Initalization =====
+
+3) mkdir Gitadventure (creates new folder)
+   cd Gitadventure
+   git init (initialize a new Git respository)
+
+
+
+
+===== Staging and Commiting =====
+
+4) touch journey.txt (to create) then open journey.txt and enter ("Embarking on my journey to master Git.")
+   git status
+   git add journey.txt 
+   git commit -m "initial commit for journey.txt"
+   git status
+
+
+
+
+===== Deletion =====
+
+5) touch temp.txt , then open temp.txt and enter ("This file is meant to be deleted")
+   git add temp.txt (staging)
+   git commit -m "Prepared temp.txt for deletion"
+   git rm temp.txt
+   git commit -m "temp.txt file deleted"
+
+
+
+
+===== Renaming =====
+
+6) git mv journey.txt adventure.txt
+   echo "My journey evolves into an adventure with Git." > adventure.txt
+   git add journey.txt
+   git commit -m "Renamed journey.txt to adventure.txt and updated content"
+
+
+
+
+===== Ignoring Files =====
+
+7) echo "*.log" > .gitignore
+   git add .gitignore
+   git status
+   git commit -m "added .gitignore to ignore all log files"
+   touch test.log
+   git status
+
+
+
+
+
+===== Diving Deeper =====
+
+8) echo "Exploring the depths of Git commands and their powers" > adventure.txt
+   git status -s
+   git add adventure.txt
+   git commit -m "updated adventure.txt with exploration insights"
+
+
+   
+
+
+===== History and Restoration =====
+
+9) git log --oneline --reverse
+   git restore --source=<commit_id> adventure.txt
+   git add adventure.txt
+   git commit -m "Reverted adventure.txt to its original state"
+
+
